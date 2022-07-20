@@ -24,7 +24,7 @@ with dataset:
     st.text("""
     I found this data from NYC taxi site and looking for further exploration of
     of each features""")
-    taxi_data = get_data("D:\\pythonProject\\streamlit_projects\\Sample_project-1\\taxi_data.csv")
+    taxi_data = get_data("taxi_data.csv")
     st.write(taxi_data.head(5))
     st.subheader("Pick up Location ID distribution on the NYC dataset")
     pulocation_dis = pd.DataFrame(taxi_data["PULocationID"].value_counts()).sort_values(by="PULocationID", ascending=False).head(50)
